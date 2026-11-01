@@ -28,7 +28,7 @@ import sys
 import time
 
 
-PLUGIN_ID = "io.github.sahzudin.omarchy-google-search"
+PLUGIN_ID = "zmnatza.web-search"
 DEFAULT_KEY = "SUPER + ALT + P"
 DEFAULT_KEYCAP = "Super+Alt+P"
 BEGIN = "-- BEGIN Web Search managed binding"

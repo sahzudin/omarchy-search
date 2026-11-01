@@ -16,4 +16,4 @@ else
 fi
 
 echo "Done. Now remove the plugin with:"
-echo "  omarchy plugin remove io.github.sahzudin.omarchy-google-search"
+echo "  omarchy plugin remove zmnatza.web-search"

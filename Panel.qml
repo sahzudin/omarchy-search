@@ -7,7 +7,7 @@ import qs.Ui
 
 Panel {
   id: root
-  moduleName: "io.github.sahzudin.omarchy-google-search"
+  moduleName: "zmnatza.web-search"
   manageIpc: false
 
   property var anchorItem: null
@@ -76,7 +76,7 @@ Panel {
       else if (u === "CTRL" || u === "CONTROL") out.push("Ctrl")
       else if (u === "ALT") out.push("Alt")
       else if (u === "SHIFT") out.push("Shift")
-      else out.push(t)
+      else out.push(u === "SPACE" ? "Space" : t)
     }
     return out.join("+")
   }
@@ -175,7 +175,7 @@ Panel {
     bar: root.bar
     open: root.opened
     focusTarget: queryField
-    centerOnBar: true
+    centerOnBar: false
     contentWidth: panel.fittedContentWidth(Style.space(520))
     contentHeight: panel.fittedContentHeight(content.implicitHeight)
 
