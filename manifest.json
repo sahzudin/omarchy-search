@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "zmnatza.web-search",
+  "id": "io.github.sahzudin.omarchy-google-search",
   "name": "Web Search",
   "version": "1.1.0",
-  "author": "zmnatza (fork of Sahzudin's omarchy-search)",
+  "author": "Sahzudin",
   "license": "MIT",
   "description": "Quickly search the web with a click: pick a search engine with Ctrl+1-9 and open your browser to the results.",
   "kinds": [
