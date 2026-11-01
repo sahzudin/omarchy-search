@@ -4,7 +4,7 @@ import qs.Ui
 
 BarWidget {
   id: root
-  moduleName: "io.github.sahzudin.omarchy-google-search"
+  moduleName: "zmnatza.web-search"
 
   readonly property string barIcon: setting("icon", "󰍋")
   readonly property string defaultEngine: setting("defaultEngine", "google")
