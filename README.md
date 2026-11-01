@@ -103,6 +103,31 @@ under `bar.layout.<section>`:
 Engine ids: `google`, `chatgpt`, `claude`, `bing`, `duckduckgo`, `github`,
 `wikipedia`, `youtube`, `reddit`, `stackoverflow`.
 
+### Add, replace, or hide engines
+
+Two optional settings customize the engine list without editing the plugin:
+
+```jsonc
+{
+  "id": "io.github.sahzudin.omarchy-google-search",
+  "extraEngines": [
+    {
+      "id": "perplexity",                              // required, unique
+      "label": "Perplexity",                           // required
+      "prefix": "https://www.perplexity.ai/search?q=", // required, the query is appended
+      "verb": "Ask",                                   // optional, "Search" (default) or "Ask"
+      "icon": "\uf002",                                // optional, Nerd Font glyph or code point
+      "after": "claude"                                // optional, insert after this engine id
+    }
+  ],
+  "hiddenEngines": ["stackoverflow"]                   // engine ids to remove
+}
+```
+
+An extra engine whose `id` matches a built-in replaces it. Engines are numbered
+in list order, so keep the list to ten or fewer to give each a `Ctrl+0`–`Ctrl+9`
+shortcut. Without these settings nothing changes.
+
 The file hot-reloads on save.
 
 ### Change the global shortcut
