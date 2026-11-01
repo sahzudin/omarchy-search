@@ -43,14 +43,14 @@ are evaluated).
 ## Install
 
 ```bash
-omarchy plugin add https://github.com/zmnatz/omarchy-search.git --enable
+omarchy plugin add https://github.com/sahzudin/omarchy-search.git --enable
 ```
 
 The plugin does not change your Hyprland configuration during installation.
 To opt into the optional **Super+Alt+P** global shortcut, run:
 
 ```bash
-python3 ~/.config/omarchy/plugins/zmnatza.web-search/scripts/bindings.py install
+python3 ~/.config/omarchy/plugins/io.github.sahzudin.omarchy-google-search/scripts/bindings.py install
 ```
 
 The helper first verifies that the key is free, safely backs up
@@ -65,8 +65,8 @@ enable it:
 
 ```bash
 ln -s ~/Projects/omarchy-search \
-      ~/.config/omarchy/plugins/zmnatza.web-search
-omarchy plugin enable zmnatza.web-search left
+      ~/.config/omarchy/plugins/io.github.sahzudin.omarchy-google-search
+omarchy plugin enable io.github.sahzudin.omarchy-google-search left
 ```
 
 Saved changes under `~/.config/omarchy/plugins/` reload automatically. If a
@@ -93,7 +93,7 @@ under `bar.layout.<section>`:
 
 ```jsonc
 {
-  "id": "zmnatza.web-search",
+  "id": "io.github.sahzudin.omarchy-google-search",
   "defaultEngine": "google",     // id of the engine preselected when the panel opens
   "openShortcut": "SUPER + ALT + P", // global panel shortcut (Hyprland combo)
   "icon": "󰍋"                    // any Nerd Font glyph
@@ -109,7 +109,7 @@ Two optional settings customize the engine list without editing the plugin:
 
 ```jsonc
 {
-  "id": "zmnatza.web-search",
+  "id": "io.github.sahzudin.omarchy-google-search",
   "extraEngines": [
     {
       "id": "perplexity",                              // required, unique
@@ -147,7 +147,7 @@ python3 scripts/bindings.py status                    # show the active key
 `install` re-binds the last-used key (or `SUPER + ALT + P`). Because the key
 must be free, Hyprland may restart the shell or ask you to log in again if a
 binding changes. To set it manually instead, remove the managed block and add
-`o.bind("<KEY>", "Web search", "omarchy-shell shell toggle zmnatza.web-search {}")`.
+`o.bind("<KEY>", "Web search", "omarchy-shell shell toggle io.github.sahzudin.omarchy-google-search {}")`.
 
 ## Remove
 
@@ -157,8 +157,8 @@ it does **not** touch the Hyprland keybinding written to
 
 ```bash
 ./uninstall.sh            # removes the managed binding block (see scripts/bindings.py)
-omarchy plugin disable zmnatza.web-search
-omarchy plugin remove zmnatza.web-search
+omarchy plugin disable io.github.sahzudin.omarchy-google-search
+omarchy plugin remove io.github.sahzudin.omarchy-google-search
 ```
 
 The widget's per-widget settings (including `openShortcut`) live in the widget
