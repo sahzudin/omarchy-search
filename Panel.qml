@@ -7,7 +7,7 @@ import qs.Ui
 
 Panel {
   id: root
-  moduleName: "zmnatza.web-search"
+  moduleName: "io.github.sahzudin.omarchy-google-search"
   manageIpc: false
 
   property var anchorItem: null
