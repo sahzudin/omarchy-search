@@ -30,6 +30,7 @@ Panel {
   ]
   property string defaultEngine: "google"
   property string openShortcut: "SUPER + ALT + P"
+  property bool centerOnBar: true
 
   property int currentEngineIndex: -1
   readonly property var currentEngine: {
@@ -76,6 +77,7 @@ Panel {
       else if (u === "CTRL" || u === "CONTROL") out.push("Ctrl")
       else if (u === "ALT") out.push("Alt")
       else if (u === "SHIFT") out.push("Shift")
+      else if (u === "SPACE") out.push("Space")
       else out.push(t)
     }
     return out.join("+")
@@ -175,7 +177,7 @@ Panel {
     bar: root.bar
     open: root.opened
     focusTarget: queryField
-    centerOnBar: true
+    centerOnBar: root.centerOnBar
     contentWidth: panel.fittedContentWidth(Style.space(520))
     contentHeight: panel.fittedContentHeight(content.implicitHeight)
 
