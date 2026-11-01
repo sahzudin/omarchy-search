@@ -30,6 +30,7 @@ Panel {
   ]
   property string defaultEngine: "google"
   property string openShortcut: "SUPER + ALT + P"
+  property bool centerOnBar: true
 
   property int currentEngineIndex: -1
   readonly property var currentEngine: {
@@ -176,7 +177,7 @@ Panel {
     bar: root.bar
     open: root.opened
     focusTarget: queryField
-    centerOnBar: false
+    centerOnBar: root.centerOnBar
     contentWidth: panel.fittedContentWidth(Style.space(520))
     contentHeight: panel.fittedContentHeight(content.implicitHeight)
 

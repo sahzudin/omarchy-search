@@ -96,7 +96,8 @@ under `bar.layout.<section>`:
   "id": "io.github.sahzudin.omarchy-google-search",
   "defaultEngine": "google",     // id of the engine preselected when the panel opens
   "openShortcut": "SUPER + ALT + P", // global panel shortcut (Hyprland combo)
-  "icon": "󰍋"                    // any Nerd Font glyph
+  "icon": "󰍋",                   // any Nerd Font glyph
+  "centerOnBar": true            // false opens the panel under the bar icon instead
 }
 ```
 

@@ -9,6 +9,8 @@ BarWidget {
   readonly property string barIcon: setting("icon", "󰍋")
   readonly property string defaultEngine: setting("defaultEngine", "google")
   readonly property string openShortcut: setting("openShortcut", "SUPER + ALT + P")
+  // true centers the panel on the bar; false opens it under the bar icon.
+  readonly property bool centerOnBar: setting("centerOnBar", true) !== false
 
   readonly property var builtinEngines: [
     { id: "google",       label: "Google",         prefix: "https://www.google.com/search?q=",          icon: 0xF1A0 },
@@ -99,6 +101,7 @@ BarWidget {
     panelLoader.item.engines = root.engines
     panelLoader.item.defaultEngine = root.defaultEngine
     panelLoader.item.openShortcut = root.openShortcut
+    panelLoader.item.centerOnBar = root.centerOnBar
     panelLoader.item.barIcon = root.barIcon
   }
 
