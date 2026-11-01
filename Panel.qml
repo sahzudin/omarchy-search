@@ -76,7 +76,8 @@ Panel {
       else if (u === "CTRL" || u === "CONTROL") out.push("Ctrl")
       else if (u === "ALT") out.push("Alt")
       else if (u === "SHIFT") out.push("Shift")
-      else out.push(u === "SPACE" ? "Space" : t)
+      else if (u === "SPACE") out.push("Space")
+      else out.push(t)
     }
     return out.join("+")
   }
